@@ -1,0 +1,12 @@
+.card-title{
+    color: #384B70;
+}
+.card{
+    transition: all 0.3s;
+}
+.card:hover{
+    transform: scale(1.05 , 1.05);
+}
+h1{
+    color: #384B70;
+}

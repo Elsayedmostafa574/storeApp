@@ -1,0 +1,9 @@
+.my-pagination{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.my-pagination ::ng-deep .ngx-pagination .current{
+    background-color: #384B70;
+    
+}

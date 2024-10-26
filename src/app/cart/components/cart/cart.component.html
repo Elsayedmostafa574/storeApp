@@ -1,0 +1,49 @@
+<div class="container my-5">
+  <h1>Cart</h1>
+    <div class="table-responsive shadow">
+        <table class="table align-middle">
+            <thead>
+                <tr class="text-center">
+                  <th scope="col">Products</th>
+                  <th scope="col">Price</th>
+                  <th scope="col">Quantity</th>
+                  <th scope="col">Total</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let item of cartProducts">
+                  <td>
+                    <div class="d-flex justify-content-between">
+                      <img [src]="item.imageCover" alt="">
+                      <div class="text px-3 flex-fill">
+                        <h5>{{item.title}}</h5>
+                        <p>{{item.quantity}}</p>
+                        <div class="d-flex ">
+                          <p>{{item.category.name}}</p>
+                          <p class="mx-5">{{item.brand.name}}</p>
+                        </div>
+                      
+                      </div>
+                    </div>
+                  </td>
+                  <td class="text-center">166 $</td>
+                  <td class="text-center">
+                    <button class="btn">+</button>
+                    <span class="px-3">{{item.count}}</span>
+                    <button class="btn">-</button>
+                  </td>
+                  <td class="text-center">300 $</td>
+                  <td><button class="btn-icon"><i class="fa-solid fa-trash"></i></button></td>
+                </tr>
+              </tbody>
+        </table>
+      </div>
+      <div class="d-flex align-items-center justify-content-between my-5">
+        <div class="col-md-8">
+          <h1>Total : 20000 $</h1>
+        </div>
+        <div class="col-md-4">
+          <button class="btn w-100 py-4 fs-3">Checkout</button>
+        </div>
+      </div>
+</div>

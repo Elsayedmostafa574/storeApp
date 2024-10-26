@@ -1,0 +1,14 @@
+<div class="container my-5">
+    <h1 class="text-center fs-1">Featured Brands</h1>
+    <p class="text-center my-5">Give your customers insight into your product collection. Select imagery and name that relates to the product brand.</p>
+    <div class="row">
+        <div class="col-md-2 my-2" *ngFor="let singleBrand of brands">
+            <div class="card shadow border-0" [routerLink]="'/productsBrand/'+ singleBrand._id">
+                <img [src]="singleBrand.image" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title text-center">{{singleBrand.name}}</h5>
+                </div>
+              </div>
+        </div>
+    </div>
+</div>

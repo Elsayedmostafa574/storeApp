@@ -1,0 +1,26 @@
+.form-box{
+    width: 70%;
+    margin: auto;
+    
+}
+form{
+    border-radius: 20px;
+}
+.btn-logout{
+    background-color: #384B70;
+    color: #fff;
+    text-transform: uppercase;
+    border-radius: 0;
+    padding: 10px 20px;
+}
+.form-label{
+    margin: 10px 0;
+}
+.form-control{
+    padding: 15px;
+    border-radius: 0;
+    border-color: #384B70;
+}
+.form-text{
+    color: red;
+}

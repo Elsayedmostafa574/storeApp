@@ -1,0 +1,37 @@
+<div class="login"> 
+    <div class="container">
+        <h1 class=" text-center my-5">My Account</h1>
+        <div class="form-box">
+            <h1 class="my-4">Login</h1>
+            <form class="px-4 py-5 shadow" [formGroup]="loginForm" (ngSubmit)="submitLoginForm()">
+              <div *ngIf="successMessage" class="alert alert-success" role="alert">
+               {{successMessage}}
+              </div>
+              <div *ngIf="errorMessage" class="alert alert-danger" role="alert">
+                {{errorMessage}}
+              </div>
+                <div class="mb-3">
+                  <label for="exampleInputEmail1" class="form-label">Email</label>
+                  <input type="email" class="form-control" formControlName="email" id="exampleInputEmail1" aria-describedby="emailHelp">
+                  <div  class="form-text" *ngIf="loginForm.controls?.['email']?.hasError('email')"><small> <strong>Invalid Email</strong></small></div>
+
+                </div>
+                <div class="mb-3">
+                  <label for="exampleInputPassword1" class="form-label">Password</label>
+                  <input type="password" class="form-control" formControlName="password" id="exampleInputPassword1">
+                  <span  class="form-text" *ngIf="loginForm.controls?.['password']?.hasError('pattern')"><small>Password should contains <strong>at least eight characters, including at least one number, includes both lower and uppercase letter, include at least one special characters</strong></small></span>
+
+                </div>
+                <div class="mb-3 form-check">
+                  <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                  <label class="form-check-label" for="exampleCheck1">Remmeber me</label>
+                </div>
+                <button type="submit" class="btn btn-login" [disabled]="loginForm.invalid">log in</button>
+                <div class="resetSingup my-4 d-flex align-items-center justify-content-between">
+                    <a href="#">Lost your password?</a>
+                    <a [routerLink]="'/register'"><span>You haven't account yet?</span> Sign Up</a>
+                </div>
+              </form>
+        </div>
+    </div>
+</div>

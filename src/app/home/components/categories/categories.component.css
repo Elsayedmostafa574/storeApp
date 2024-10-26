@@ -1,0 +1,11 @@
+
+.image-box{
+    max-height: 200px;
+    overflow: hidden;
+}
+.product-image{
+    width: 100%;
+}
+h1{
+    color: #384B70;
+}

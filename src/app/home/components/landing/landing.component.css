@@ -1,0 +1,28 @@
+.header{
+    height: 100vh;
+    
+}
+.header img{
+    height: 100vh;
+}
+.header .text-box h1{
+    max-width: 400px;
+    line-height: 50px;
+    letter-spacing: 5px;
+    font-size: 3rem;
+    color: #384B70;
+}
+.header .text-box p{
+    color: #777;
+    font-style: italic;
+    font-weight: 600;
+    letter-spacing: 2px;
+    margin: 20px 0;
+}
+.header .text-box .btn{
+    background-color: #384B70;
+    color: #fff;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 0;
+}

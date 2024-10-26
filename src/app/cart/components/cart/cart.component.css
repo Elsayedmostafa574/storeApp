@@ -1,0 +1,13 @@
+img{
+    width: 150px;
+    height: 150px;
+}
+.btn{
+    background-color: #384B70;
+    color: #fff;
+}
+.btn-icon{
+    background-color: transparent;
+    border: none;
+    color: #384B70;
+}

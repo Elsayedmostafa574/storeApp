@@ -1,0 +1,20 @@
+
+
+<div class="container my-5">
+    <h1 class="text-center fs-1">Featured Categories</h1>
+    <p class="text-center my-5">Give your customers insight into your product collection. Select imagery and name that relates to the product category.</p>
+    <p-carousel [value]="categories" [numVisible]="5" [numScroll]="1" [circular]="true" [responsiveOptions]="responsiveOptions" [autoplayInterval]="3000">
+        <ng-template let-product pTemplate="item">
+            <div class="product-item">
+                <div class="product-item-content">
+                    <div class="mb-3 image-box">
+                        <img [src]="product.image" [alt]="product.name" class="product-image" />
+                    </div>
+                    <div>
+                        <h2 class="mb-1 text-center">{{ product.name }}</h2>
+                    </div>
+                </div>
+            </div>
+        </ng-template>
+    </p-carousel>
+</div>

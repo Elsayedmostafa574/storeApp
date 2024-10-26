@@ -1,0 +1,23 @@
+.btn{
+    width: 80%;
+    margin: 20px auto;
+    background-color: #384B70;
+    color: #fff;
+    border: none;
+    border-radius: 0;
+    padding: 10px 30px;
+}
+h1{
+    color: #384B70;
+}
+.myCard{
+    position: relative;
+}
+.wishlist{
+    font-size: 30px;
+    position: absolute;
+    z-index: 111111111;
+    top: 20px;
+    right: 50px;
+    color: #384B70;
+}

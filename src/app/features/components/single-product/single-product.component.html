@@ -1,0 +1,18 @@
+<div class="container my-4">
+    <h1 class="text-center fs-1">Featured Collection</h1>
+    <p class="text-center my-5">A powerful headline about your product’s features to give focus to your chosen product collection</p>
+<div class="row">
+    <div class="col-md-6 col-lg-4 myCard" *ngFor="let product of products | paginate: { itemsPerPage: 10, currentPage: page}">
+        <a class="wishlist my-1" (click)="addToWishlist(product)"><i class="fa-solid fa-heart"></i></a>
+        <div class="card my-3">
+            <img [src]="product.imageCover" [routerLink]="'/product-details/' + product.id" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title" [routerLink]="'/product-details/' + product.id">{{product.title}}</h5>
+              <p class="card-text">{{product.price}} $</p>
+            </div>
+            <button class="btn">ADD TO CART</button>
+        </div>
+       
+    </div>
+</div>
+</div>

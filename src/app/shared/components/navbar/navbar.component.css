@@ -1,0 +1,15 @@
+.navbar-brand{
+    color: #384B70;
+}
+.nav-item{
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.nav-link{
+    font-size: 20px;
+    cursor: pointer;
+}
+.active{
+    color: #384B70 !important;
+    font-weight: 600;
+}

@@ -1,0 +1,42 @@
+<div class="signup"> 
+    <div class="container">
+        <h1 class=" text-center my-5">My Account</h1>
+        <div class="form-box">
+            <h1 class="my-4">Register</h1>
+            <form class="px-4 py-5 shadow" [formGroup]="signupForm" (ngSubmit)="setSignup()">
+              
+                <div class="mb-3">
+                    <label for="name" class="form-label">Name</label>
+                    <input type="text" class="form-control" id="name" formControlName="name" placeholder="Enter Your Name">
+                    <div></div>
+                  </div>
+                  <div class="mb-3">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="email" formControlName="email" placeholder="Enter Your Email">
+                    <div  class="form-text" *ngIf="signupForm.controls?.['email']?.hasError('email')"><small> <strong>Invalid Email</strong></small></div>
+
+                  </div>
+                  <div class="mb-3">
+                    <label for="password" class="form-label">Password</label>
+                    <input type="password" class="form-control" id="password" formControlName="password" placeholder="Enter Your Password">
+                    <span  class="form-text" *ngIf="signupForm.controls?.['password']?.hasError('pattern')"><small>Password should contains <strong>at least eight characters, including at least one number, includes both lower and uppercase letter, include at least one special characters</strong></small></span>
+
+                  </div>
+                  <div class="mb-3">
+                    <label for="repaswword" class="form-label">Re-Password</label>
+                    <input type="password" class="form-control" id="repaswword" formControlName="rePassword" placeholder="Enter Your Re-Password">
+                    <span  class="form-text" *ngIf="signupForm.controls?.['password']?.hasError('pattern')"><small>Password should contains <strong>at least eight characters, including at least one number, includes both lower and uppercase letter, include at least one special characters</strong></small></span>
+
+                  </div>
+                  <div class="mb-3">
+                    <label for="phone" class="form-label">Phone</label>
+                    <input type="text" class="form-control" id="phone" formControlName="phone" placeholder="Enter Your Phone Number">
+                  </div>
+                  <div class="d-flex align-items-center justify-content-between">
+                    <button class="btn btn-logout" type="submit" [disabled]="signupForm.invalid">SignUp</button>
+                    <a [routerLink]="'/login'">Have account already? <span class="fw-bold">Login</span></a>
+                  </div>
+              </form>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,35 @@
+.imageCover{
+    width: fit-content;
+    margin: auto;
+}
+
+.btn{
+    width: 100%;
+    margin: auto;
+    background-color: #384B70;
+    color: #fff;
+    border: 1px solid #fff;
+    border-radius: 0;
+    padding: 10px 30px;
+}
+.btn:hover{
+    background-color: #fff;
+    color: #384B70;
+    border-color: #384B70;
+}
+.heart{
+    background-color: #fff;
+    color: #384B70;
+    border: 1px solid #384B70;
+    padding: 10px;
+    transition: all 0.3s;
+}
+.heart:hover{
+    background-color: #384B70;
+    color: #fff;
+    border-color: #fff;
+}
+.productInfo span {
+    color: #384B70;
+    font-weight: 600;
+}
